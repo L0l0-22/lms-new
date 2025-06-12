@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.767" height="22.767" viewBox="0 0 22.767 22.767">
+  <g id="linkedin" transform="translate(-0.381 0.145)">
+    <path id="Ellipse" d="M0,11.383A11.383,11.383,0,1,1,11.383,22.767,11.383,11.383,0,0,1,0,11.383Z" transform="translate(0.381 -0.145)" fill="#0175ff"/>
+    <g id="linkedin-2" data-name="linkedin" transform="translate(6.381 5.855)">
+      <path id="Shape" d="M0,0H10.672V10.672H0Z" fill="none"/>
+    </g>
+    <path id="Shape-2" data-name="Shape" d="M4.6,8H2.846V2.437h1.77L4.6,3.184a2.073,2.073,0,0,1,1.816-.92A2,2,0,0,1,8.475,4.478V8H6.719V5.083C6.719,4.2,6.2,3.8,5.694,3.8A1.154,1.154,0,0,0,4.6,5.083V8ZM1.805,8H.026V2.437H1.805V8ZM.889,1.779a.89.89,0,1,1,.444-.119A.887.887,0,0,1,.889,1.779Z" transform="translate(7.689 7.189)" fill="#fff"/>
+  </g>
+</svg>

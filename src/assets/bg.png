@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="384" viewBox="0 0 1440 384">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.333" y2="2.927" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4e69ef"/>
+      <stop offset="1" stop-color="#1bddaa"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Background" d="M0,0H1440V352.528c0,18.941-217.98,32.68-277.971,30.151L0,327.613Z" fill="#5b77ff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_202" data-name="Group 202" transform="translate(0 -80)">
+    <g id="Group_200" data-name="Group 200" transform="translate(0 80)">
+      <rect id="Bg" width="1440" height="384" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Background-2" data-name="Background" transform="translate(0 80)" clip-path="url(#clip-path)">
+      <g id="Pattern" transform="translate(1290.083 152.874) rotate(45)" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8" opacity="0.3">
+        <rect width="301.677" height="301.677" rx="30" stroke="none"/>
+        <rect x="1" y="1" width="299.677" height="299.677" rx="29" fill="none"/>
+      </g>
+      <g id="Pattern-2" data-name="Pattern" transform="translate(1449.501 27.096) rotate(45)" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8" opacity="0.3">
+        <rect width="173.983" height="173.983" rx="30" stroke="none"/>
+        <rect x="1" y="1" width="171.983" height="171.983" rx="29" fill="none"/>
+      </g>
+      <g id="Pattern-3" data-name="Pattern" transform="translate(-59 10.694) rotate(45)" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8" opacity="0.3">
+        <rect width="217.622" height="217.622" rx="30" stroke="none"/>
+        <rect x="1" y="1" width="215.622" height="215.622" rx="29" fill="none"/>
+      </g>
+      <g id="Pattern-4" data-name="Pattern" transform="translate(70 -67.008) rotate(45)" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8" opacity="0.3">
+        <rect width="125.507" height="125.507" rx="20" stroke="none"/>
+        <rect x="1" y="1" width="123.507" height="123.507" rx="19" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

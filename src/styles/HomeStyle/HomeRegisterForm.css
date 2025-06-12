@@ -1,0 +1,198 @@
+.submit-section{
+
+
+    display: flex;
+    justify-content: end;
+
+}
+
+
+
+.register-container h6{
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.register-container h5{
+
+    font-size: 42px;
+    font-weight: 700;
+}
+.register-container h4{
+
+    font-size: 20px;
+    font-weight: 300;
+}
+.register-container p{
+
+    font-size: 18px;
+    color: #808080;
+}
+
+.flexing-register{
+    display: flex;
+    column-gap: 10%;
+}
+
+.register-container{
+
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.register-section{
+
+display: flex;
+justify-content: center;
+align-items: center;
+height: 543px;
+width: 900px ;
+border-radius: 14px;
+}
+
+.register-form input{
+
+width: 440px;
+height: 48px;
+border: 1px solid #DADADA;
+border-radius: 8px;
+color:#DADADA ;
+padding-left: 20px;
+outline: none;
+background-color: white;
+
+}
+
+.register-form textarea {
+
+    background-color: white;
+
+}
+
+.register-form input::placeholder {
+    color: #DADADA;
+  }
+
+.register-form textarea{
+
+    width: 440px;
+    height: 112px;
+    border: 1px solid #DADADA;
+    border-radius: 8px;
+    color:#DADADA ;
+    padding-left: 20px;
+    padding-top: 10px;
+    outline: none;
+    
+    }
+
+
+   
+
+    .register-form textarea::placeholder {
+        color: #DADADA;
+      }
+
+      @media (max-width: 480px) {
+        .register-form input{
+            width: 282px;  
+      }
+      .register-form textarea{
+        width: 282px;
+        height: 112px;
+        }
+        .register-section{
+            
+            width: 100%;
+            height: 494px;
+            }
+
+            .flexing-register{
+
+                display: flex;
+                flex-direction: column;
+                }
+
+                .register-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                }
+    }
+
+ 
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      
+        .flexing-register{
+
+            display: flex;
+            flex-direction: column;
+            }
+
+            .register-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100% !important;
+            }
+
+        .register-section{
+
+            background-color: #00AAEF;
+            display: flex;
+            justify-content: center !important;
+            align-items: center !important;
+            height: 543px;
+            border-radius: 14px;
+            column-gap: 1rem;
+            width: 100% !important;
+            }
+
+            .register-form input{
+
+                width: 100% !important;
+                height: 48px;
+                border: 1px solid #DADADA;
+                border-radius: 8px;
+                color:#DADADA ;
+                padding-left: 20px;
+                outline: none;
+                
+                
+                
+                }
+
+                .flexing-register{
+                    display: flex;
+                    column-gap: 5%;
+                    row-gap: 2rem;
+                }
+
+                .register-container{
+
+                    width: 50%;
+                
+                }
+
+                .register-section{
+
+                    background-color: #00AAEF;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 543px;
+                    width: 450px ;
+                    border-radius: 14px;
+                    padding: 2rem;
+                    }
+                
+
+        }
+
+        

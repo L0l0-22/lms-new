@@ -1,0 +1,135 @@
+.first-section {
+    background: url('/webapps/lms_react/src/assets/Bg.64eebd25f1afcc573ef1.png') no-repeat center center fixed;
+    background-size: cover;
+    padding-bottom: 0.3rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+
+.card15 {
+    margin-top: 3%;
+    background-image: url('/webapps/lms_react/src/assets/Group 50.png') ;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+.card15:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* .custom-swiper.swiper-pagination {
+    padding-top: 1rem !important;}
+   */
+
+/* Title style */
+.card15-title {
+    width: 550px;
+    color: white;
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Text style (instructor name) */
+.card15-text {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Price button style */
+.price_btn2 {
+    width: 90px;
+    height: 48px;
+    background-color: #95D354;
+    border: 0px;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.combinedshape {
+    z-index: -5555555;
+    position: absolute;
+    margin-left: 12%;
+    margin-top: 8%;
+}
+
+.centerslide {}
+
+@media (max-width: 480px) {
+
+    .card15 {
+        margin-top: 6%;
+        width: 300px;
+        background-image: url('/webapps/lms_react/src/assets/bannermobileview.png');
+    }
+
+    .card15-body {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .card-category5 {
+        display: none;
+    }
+
+    .card15-title {
+        width: 100%;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+    .card15-text {
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .centerslide {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+    .card15 {
+        margin-top: 6%;
+        width: 100%;
+        background-image: url('/webapps/lms_react/src/assets/Group 50.png');
+        border-radius: 10px;
+        /* Optional: make corners rounded */
+    }
+
+}

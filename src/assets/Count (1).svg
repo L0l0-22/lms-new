@@ -1,0 +1,7 @@
+<svg id="Count" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <circle id="bg" cx="19" cy="19" r="19" fill="#009ce4"/>
+  <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(13.75 13.75)">
+    <path id="Path_292" data-name="Path 292" d="M3.75,9h10.5" transform="translate(-3.75 -3.75)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_293" data-name="Path 293" d="M9,3.75,14.25,9,9,14.25" transform="translate(-3.75 -3.75)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

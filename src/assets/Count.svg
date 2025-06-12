@@ -1,0 +1,10 @@
+<svg id="Count" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <g id="bg" fill="#fff" stroke="rgba(139,139,139,0.16)" stroke-width="1">
+    <circle cx="19" cy="19" r="19" stroke="none"/>
+    <circle cx="19" cy="19" r="18.5" fill="none"/>
+  </g>
+  <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(13.75 13.75)">
+    <path id="Path_292" data-name="Path 292" d="M14.25,9H3.75" transform="translate(-3.75 -3.75)" fill="none" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_293" data-name="Path 293" d="M14.25,3.75,9,9l5.25,5.25" transform="translate(-9 -3.75)" fill="none" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

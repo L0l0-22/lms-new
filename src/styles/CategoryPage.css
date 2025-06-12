@@ -1,0 +1,322 @@
+.sofware-background {
+    background-image: url('/webapps/lms_react/src/assets/Group 202.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.pre-text {
+
+    padding-top: 2rem;
+
+}
+
+.pre-text h6 {
+
+    font-size: 16px;
+
+}
+
+.pre-text h3 {
+    padding-top: 1rem;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 1rem !important;
+
+}
+
+.List {
+    border-bottom: 1px solid #DADADA;
+    margin-bottom: 20px;
+
+}
+
+.List li {
+
+    list-style-type: none;
+    padding-bottom: 1rem;
+
+}
+
+.List ul {
+
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+
+
+}
+
+
+
+.List ul li {
+
+    color: black;
+    font-size: 16px;
+
+
+}
+
+.List-item2 {
+    margin-left: 40px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border-bottom: 3px solid transparent;
+    border-radius: 2px;
+}
+
+
+
+
+.List-item2.active {
+    color: #009CE4;
+    border-bottom-color: #009CE4;
+    font-weight: 700;
+
+}
+
+
+
+.Most-popular {
+
+    margin-left: 0px !important;
+    text-decoration: none;
+
+}
+
+.card {
+
+    width: 370px !important;
+    height: 480px !important;
+}
+
+.loadmoresec {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.loadmoresec button {
+
+    width: 182px;
+    height: 50px;
+    background: #00AAEF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 30px #C0C0C029;
+    border-radius: 5px;
+    color: white;
+    border: 0px;
+    font-weight: 700
+}
+
+
+.card-new-updated {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: auto;
+    border: 1px solid #E9E9E9;
+    border-radius: 6px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card-new-updated:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+
+.techersec_new {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 0.3rem;
+}
+
+.tech-img-name {
+
+    margin-top: 0.3rem;
+}
+
+
+.circled-techer-img2 {
+
+
+    width: 30px;
+    height: 30px;
+}
+
+/* .active{
+
+        color: #009CE4;
+        border-bottom: 4px solid #009CE4 ;
+        padding-bottom: 1.1rem;
+
+    } */
+    .list_of_card_software {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 330px); /* Fixed width of 330px per card */
+        gap: 2rem 3rem; /* row-gap and column-gap */
+        padding: 3rem 0;
+        justify-items: start; /* align items to start of each column */
+        place-content: center; /* center the grid */
+      }
+
+.tech-img-sec {
+    padding-top: 1rem;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.nameoftecher {
+
+    padding-top: 0.2rem;
+
+}
+
+.card-title-new2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #292929;
+    padding-top: 0.5rem;
+}
+
+
+.card-text-new2 {
+    color: #707070;
+    padding-top: 0.2rem;
+    font-size: 15px;
+    
+}
+
+.card-new-btn2 {
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+.lessons_number_new {
+
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .lessons_number_new img {
+  
+    margin-right: 3px;
+  }
+  
+  .price_btn_new {
+    font-size: 16px;
+    color: #292929;
+    float: right;
+  }
+
+  .price_btn_new span {
+
+    color: #009CE4;
+  
+  }
+  
+@media (max-width: 480px) {
+
+    .list_of_card_software {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .List ul li {
+
+        color: black;
+        font-size: 16px;
+
+
+    }
+
+    .List-item2 {
+        margin-left: 8%;
+        cursor: pointer;
+        padding-bottom: 10px;
+        border-bottom: 3px solid transparent;
+        border-radius: 2px;
+    }
+
+    .card-new {
+        border: 1px solid #E9E9E9;
+    }
+
+    .sofware-background {
+        background-image: url('/webapps/lms_react/src/assets/Group 202.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+    }
+
+    .sofware-background .img {
+
+        margin-top: -30px !important;
+    }
+
+    .overlay-text-bg h2 {
+        font-size: 20px;
+    }
+
+    .overlay-text-bg p {
+        font-size: 16px;
+    }
+
+    .overlay-text-bg p span {
+        font-size: 16px;
+    }
+
+    .block-sec-pass {
+        display: block;
+
+    }
+
+    .sofware-background .overlay-text-bg h2 {
+
+        font-size: 18px;
+
+    }
+
+    .List ul {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0px;
+    
+    
+    }
+    
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+
+    .list_of_card_software {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,240 @@
+.flexing-login{
+
+    display: flex;
+
+}
+
+.left-img-sec{
+
+    width: 50%;
+}
+
+.left-img{
+
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+.lms-logo{
+
+    width: 300px;
+    margin-bottom: 3rem;
+
+}
+
+.right-content-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: width 0.3s ease; /* Adds a smooth transition */
+}
+
+
+.card-title5 {
+    font-size: 34px;
+    font-weight: 600;
+    color: #343434;
+}
+
+.card-title6 {
+    padding-top: 1rem;
+    font-size: 24px;
+    color: #343434;
+    font-weight: 400;
+    padding-bottom: 3rem;
+
+}
+
+.Login-btn {
+    color: white;
+    font-weight: 700;
+    width: 465px;
+    height: 50px;
+    background: #95D354 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    border: 0px;
+}
+
+.Login-btn:hover {
+    background: #76c246; /* Darker green on hover */
+}
+
+.login-btn-section {
+
+    margin-top: 5%;
+}
+
+.login-btn-section a {
+
+    color: #81CB34;
+
+}
+
+
+.form-group100 label {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.form-group100 input {
+    width: 465px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EAECED;
+    border-radius: 5px;
+    padding: 1px ;
+    padding-left: 10px;
+
+}
+
+.select-country label{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+.forgetpass-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+
+.forgetpass-container a {
+    color: #81CB34;
+    padding-right: 5px;
+
+}
+
+.centerdont {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+
+}
+
+
+.centerdont a {
+    color: #81CB34;
+
+}
+
+.logo55{
+    display: none;
+}
+@media (max-width: 480px) {
+
+
+    .flexing-login{
+
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .left-img-sec{
+    
+        width: 100%;
+    }
+
+    .right-content-sec{
+
+        width: 100%;
+    }
+
+    .form-group100 input {
+        width: 100%;
+        height: 50px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #EAECED;
+        border-radius: 5px;
+        padding: 1px ;
+        padding-left: 10px;
+    
+    }
+    
+    .Login-btn {
+        color: white;
+        font-weight: 700;
+        width: 100%;
+        height: 50px;
+        background: #95D354 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        border: 0px;
+    }
+
+    .left-img{
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .lms-logo{
+
+        width: 300px;
+        margin-bottom: 1rem;
+    
+    }
+    
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+ 
+    .flexing-login{
+
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .left-img-sec{
+    
+        width: 100%;
+    }
+
+    .right-content-sec{
+
+        width: 100%;
+    }
+
+    .form-group100 input {
+        width: 100%;
+        height: 50px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #EAECED;
+        border-radius: 5px;
+        padding: 1px ;
+        padding-left: 10px;
+    
+    }
+    
+    .Login-btn {
+        color: white;
+        font-weight: 700;
+        width: 100%;
+        height: 50px;
+        background: #95D354 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        border: 0px;
+    }
+
+    .left-img{
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .lms-logo{
+
+        width: 300px;
+        margin-bottom: 1rem;
+    
+    }
+
+}

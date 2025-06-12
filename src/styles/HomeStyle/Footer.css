@@ -1,0 +1,199 @@
+*{
+
+    font-family: 'Montserrat', sans-serif;
+  
+  }
+.footer {
+    color:white;
+    height: auto;
+  }
+  .footer .links ul {
+    list-style-type: none;
+  }
+  .footer .links li a {
+    color: #231060;
+    font-weight: 100;
+    font-size: 12px;
+  }
+  .footer .links li a:hover {
+    text-decoration: none;
+    color: #4180CB;
+  }
+  .footer .about-company i {
+    font-size: 25px;
+  }
+  .footer .about-company a {
+    color: #231060;
+    transition: color 0.2s;
+  }
+  .footer .about-company a:hover {
+    color: #4180CB;
+  }
+  .footer .location i {
+    font-size: 18px;
+  }
+  .footer .copyright p {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  } 
+  
+  .footer-left-text{
+  
+    font-size: 16px;  
+    font-weight: 300;
+  
+  }
+  
+  
+  .footer-list{
+  
+  
+    margin: 20px;
+    margin-top: 48px;
+  }
+  
+  .footer-list-div h6{
+
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  .footer-list-div {
+
+    margin-bottom: -2% !important ;
+  }
+  
+  .social-icon{
+  
+  
+    margin-left: 10px;
+  } 
+  
+  .social-section{
+  
+  
+ 
+  }
+
+
+  .newsletter-input{
+
+    width: 270px;
+    height: 35px;
+    border: 1px solid #DADADA;
+    border-radius: 8px;
+    padding-left: 15px;
+
+  }
+
+  .subscibe_btn{
+    background-color: #95D354;
+    border: 0px;
+    margin-top: 20px;
+  }
+
+  .last-section p{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+
+  }
+
+  .last-section{
+
+
+    border-top: 2px solid white;
+
+  }
+
+  
+
+  @media only screen and (max-width: 820px) {
+
+    
+    .footer {
+      margin-left: 5% !important; 
+      margin-right: 0%  !important;
+    }
+
+    .social-section{
+
+
+        float: right; margin-left: -3% !important; margin-top: -1px;
+      }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .footer {
+        margin-left: 0%; 
+        margin-right: 0% ;
+        clear: both !important;
+        margin: auto !important;
+      
+      }
+      
+    .footer-list-div{
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+  
+  
+  
+      }
+      
+      .footer-left-text{
+      
+        width: 100% !important;
+      }
+      
+      
+      .footer-list{
+      clear: both !important;
+      margin: auto !important;
+      }
+
+      .social-section{
+
+
+        float: none !important;
+         margin-left: -1% !important;
+         margin-top: 10% !important;
+         justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+  
+      }
+      .social-icon{
+  
+        float: none !important;
+        } 
+
+    
+}
+
+@media (max-width: 480px) {
+.newsletter-input{
+width: 100%;
+}
+.subscibe_btn{
+  width: 154px;
+  height: 48px;
+  margin-bottom: 1rem;
+}
+}
+
+
+@media (min-width: 768px) {
+  .newsletter-input{
+
+    width: 100%;
+    height: 35px;
+    border: 1px solid #DADADA;
+    border-radius: 8px;
+    padding-left: 15px;
+
+  }
+
+}
