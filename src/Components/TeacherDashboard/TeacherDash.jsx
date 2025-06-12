@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import {
   MdOutlineDashboardCustomize,
   MdOutlineClass,
-  MdOutlineSchedule,
   MdOutlineAssessment,
   MdOutlinePeopleAlt,
   MdOutlineBook,
   MdOutlineCalendarToday,
-  MdMenu
+  MdMenu,
+  MdQuiz
 } from 'react-icons/md';
 import teacher2 from "/webapps/lms_react/src/assets/teacher.jpg";
 import Dashboard from './Dahboard';
@@ -17,6 +17,7 @@ import Courses from './Courses/Courses';
 import TeacherCourseDetails from './Courses/TeacherCourseDetails';
 import EditCourseModal from './Courses/EditCourseModal';
 import Assesments from './Assesments/Assesments';
+import QuizDashboard from './Quizzes/QuizDashboard';
 
 export default function TeacherDash() {
   const [selectedPage, setSelectedPage] = useState(() => {
@@ -60,7 +61,7 @@ export default function TeacherDash() {
             { label: 'Dashboard', icon: <MdOutlineDashboardCustomize /> },
             { label: 'Course', icon: <MdOutlineBook /> },
             { label: 'Assessments', icon: <MdOutlineAssessment /> },
-            { label: 'My Schedule', icon: <MdOutlineSchedule /> },
+            { label: 'Quizzes', icon: <MdQuiz /> },
             { label: 'Students', icon: <MdOutlinePeopleAlt /> },
             { label: 'Classes', icon: <MdOutlineClass /> },
             { label: 'Calendar', icon: <MdOutlineCalendarToday /> },
@@ -114,11 +115,8 @@ export default function TeacherDash() {
         {selectedPage === 'Assessments' && (
          <Assesments/>
         )}
-        {selectedPage === 'My Schedule' && (
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-2xl font-bold mb-4">My Schedule</h2>
-            <p>Your calendar schedule goes here...</p>
-          </div>
+        {selectedPage === 'Quizzes' && (
+         <QuizDashboard/>
         )}
         {selectedPage === 'Students' && (
           <div className="bg-white p-6 rounded-xl shadow">

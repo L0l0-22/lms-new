@@ -5,7 +5,6 @@ import { PiStudentDuotone } from "react-icons/pi";
 import { RiBarChart2Line } from "react-icons/ri";
 import AddAssesmentModal from "./AddAssesmentModal";
 import { FaEdit, FaEye } from "react-icons/fa";
-import ViewModal from "./ViewModal";
 import EditAssessmentModal from "./EditAssessmentModal";
 export default function Assesments() {
    const [assessments, setAssessments] = useState([
@@ -43,8 +42,6 @@ export default function Assesments() {
   },
     ]);
   const [newModalOpen, setNewModalOpen] = useState(false);
-  const [viewModalOpen, setViewModalOpen] = useState(false);
-  const [selectedAssessment, setSelectedAssessment] = useState(null);
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [assessmentToEdit, setAssessmentToEdit] = useState(null);
   const handleEditSave = (updatedAssessment) => {
@@ -54,7 +51,6 @@ export default function Assesments() {
       )
     );
   };
-
   const handleAddAssesment = (newCourse) => {
     const fullCourse = {
       ...newCourse,
@@ -62,7 +58,6 @@ export default function Assesments() {
     };
     setAssessments((prev) => [...prev, fullCourse]);
   };
-
   return (
     <div className="p-6 space-y-6">
       {/* Summary Cards */}
@@ -152,20 +147,19 @@ export default function Assesments() {
             </td>
              <td className="py-4 text-gray-600">{item.dueDate}</td>
              <td className="py-4 space-x-3">
-               <button
-                onClick={() => {
-                  setSelectedAssessment(item);
-                  setViewModalOpen(true);
-                }}
-                className="text-primaryBlue border border-primaryBlue rounded-full p-2 text-sm hover:bg-primaryBlue hover:text-white"
-              >
-                <FaEye size={18} />
-              </button>
-              {viewModalOpen && selectedAssessment && (
-             <ViewModal onClose={() => setViewModalOpen(false)} pdfFile={selectedAssessment?.pdfFile} />
-
-              )}
-            
+            <button
+                    onClick={() => {
+                      if (item.pdfFile instanceof File) {
+                        const pdfUrl = URL.createObjectURL(item.pdfFile);
+                        window.open(pdfUrl, "_blank");
+                      } else if (typeof item.pdfFile === "string") {
+                        window.open(item.pdfFile, "_blank");
+                      } 
+                    }}
+                    className="text-primaryBlue border border-primaryBlue rounded-full p-2 text-sm hover:bg-primaryBlue hover:text-white"
+                  >
+                    <FaEye size={18} />
+                  </button>            
               <button
                 onClick={() => {
                   setAssessmentToEdit(item);

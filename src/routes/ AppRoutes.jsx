@@ -19,6 +19,7 @@ import UploadCoursePage from "../pages/UploadCoursePage";
 import ForgetPage from "../pages/ForgetPage";
 import Verify from "../pages/Verify";
 import TeacherDashPage from "../pages/TeacherDashPage";
+import Quiz from "../pages/Quiz";
 
 const AppRoutes = () => {
   
@@ -39,6 +40,7 @@ const AppRoutes = () => {
       <Route path="/uploadCourse" element={<UploadCoursePage />} />
       <Route path="/teacherdashboard" element={<TeacherDashPage />}>
       </Route>
+      <Route path="/quiz" element={<Quiz />} />
       <Route path="/dashboard" element={<Dashboard />}>
           <Route path="courses" element={<MyCourses />} />
           <Route path="coursesForTeacher" element={<CourseForTeacher/>} />
