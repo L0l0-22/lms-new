@@ -6,6 +6,7 @@ import { RiBarChart2Line } from "react-icons/ri";
 import AddAssesmentModal from "./AddAssesmentModal";
 import { FaEdit, FaEye } from "react-icons/fa";
 import ViewModal from "./ViewModal";
+import EditAssessmentModal from "./EditAssessmentModal";
 export default function Assesments() {
    const [assessments, setAssessments] = useState([
   {
@@ -44,6 +45,15 @@ export default function Assesments() {
   const [newModalOpen, setNewModalOpen] = useState(false);
   const [viewModalOpen, setViewModalOpen] = useState(false);
   const [selectedAssessment, setSelectedAssessment] = useState(null);
+  const [editModalOpen, setEditModalOpen] = useState(false);
+  const [assessmentToEdit, setAssessmentToEdit] = useState(null);
+  const handleEditSave = (updatedAssessment) => {
+    setAssessments((prev) =>
+      prev.map((item) =>
+        item === assessmentToEdit ? updatedAssessment : item
+      )
+    );
+  };
 
   const handleAddAssesment = (newCourse) => {
     const fullCourse = {
@@ -155,9 +165,24 @@ export default function Assesments() {
              <ViewModal onClose={() => setViewModalOpen(false)} pdfFile={selectedAssessment?.pdfFile} />
 
               )}
-              <button className="text-primaryGreen font-bold border border-primaryGreen rounded-full p-2 hover:bg-primaryGreen hover:text-white">
+            
+              <button
+                onClick={() => {
+                  setAssessmentToEdit(item);
+                  setEditModalOpen(true);
+                }}
+                className="text-primaryGreen font-bold border border-primaryGreen rounded-full p-2 hover:bg-primaryGreen hover:text-white"
+              >
                 <FaEdit size={18} />
               </button>
+                {editModalOpen && assessmentToEdit && (
+                  <EditAssessmentModal
+                    onClose={() => setEditModalOpen(false)}
+                    onSave={handleEditSave}
+                    initialData={assessmentToEdit}
+                  />
+                )}
+
             </td>
           </tr>
         ))}
