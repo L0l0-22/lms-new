@@ -8,30 +8,46 @@ import AddQuestionsModal from "./AddQuestionModal";
 import { useNavigate } from "react-router-dom";
 import EditQuestionModal from "./EditQuestionModal";
 export default function Quizzes() {
-  const [quizzes, setQuizzes] = useState([
-    {
-      id: 1,
-      course: "React Fundamentals",
-      quizTitle: "Hooks Basics Quiz",
-      totalQuestions: 10,
-      attempts: 25,
-      averageScore: 82,
-      dueDate: "July 10, 2025",
-          questions: [], // ✅ add this
+ const [quizzes, setQuizzes] = useState([
+  {
+    id: 1,
+    course: "React Fundamentals",
+    quizTitle: "Hooks Basics Quiz",
+    totalQuestions: 10,
+    attempts: 25,
+    averageScore: 82,
+    dueDate: "July 10, 2025",
+    questions: [
+      {
+        questionText: "What is useState used for?",
+        options: ["Data fetching", "Managing state", "Styling", "Routing"],
+        correctAnswerIndex: 1
+      } , 
+        {
+        questionText: "What is React.memo used for?",
+        options: ["State update", "Performance boost", "Routing", "Context API"],
+        correctAnswerIndex: 3
+      }
+    ]
+  },
+  {
+    id: 2,
+    course: "Advanced React",
+    quizTitle: "Performance Patterns",
+    totalQuestions: 8,
+    attempts: 40,
+    averageScore: 77,
+    dueDate: "July 15, 2025",
+    questions: [
+      {
+        questionText: "What is React.memo used for?",
+        options: ["State update", "Performance boost", "Routing", "Context API"],
+        correctAnswerIndex: 1
+      }
+    ]
+  }
+]);
 
-    },
-    {      
-      id: 2,
-      course: "Advanced React",
-      quizTitle: "Performance Patterns",
-      totalQuestions: 8,
-      attempts: 40,
-      averageScore: 77,
-      dueDate: "July 15, 2025",
-          questions: [], // ✅ add this
-
-    },
-  ]);
   const [newModalOpen, setNewModalOpen] = useState(false);
   const [addQuestionModalOpen, setAddQuestionModalOpen] = useState(false);
   const [editQuestionModalOpen, setEditQuestionModalOpen] = useState(false);
@@ -145,7 +161,6 @@ export default function Quizzes() {
               <tr key={quiz.id} className="hover:bg-gray-50 border-b border-gray-200">
                 <td className="py-4 font-semibold text-gray-600">{quiz.course}</td>
                 <td className="py-4 text-gray-600 font-medium">{quiz.quizTitle}</td>
-                
                 <td className="py-4 ">
                  <span className="px-3 py-1 ml-9 text-sky-600 bg-sky-100 rounded-full">
                     {quiz.totalQuestions}
@@ -162,8 +177,7 @@ export default function Quizzes() {
                     {quiz.averageScore}%
                   </span>
                 </td>
-             <td className="py-4 space-x-3">
-                   
+                <td className="py-4 space-x-3">
                      <button
                     onClick={() => handleAddQuestions(quiz)}
                     className="hover:text-primaryGreen border hover:border-primaryGreen rounded-lg p-2 text-sm bg-primaryGreen hover:bg-transparent text-white "
@@ -177,7 +191,6 @@ export default function Quizzes() {
                         onAddQuestion={handleAddQuestion}
                     />
                     )}
-
                      <button
                         onClick={() => {
                             navigate(`/quiz`);
