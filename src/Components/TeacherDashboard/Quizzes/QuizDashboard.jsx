@@ -47,7 +47,6 @@ export default function Quizzes() {
     ]
   }
 ]);
-
   const [newModalOpen, setNewModalOpen] = useState(false);
   const [addQuestionModalOpen, setAddQuestionModalOpen] = useState(false);
   const [editQuestionModalOpen, setEditQuestionModalOpen] = useState(false);
@@ -184,13 +183,6 @@ export default function Quizzes() {
                     >
                         Add Questions
                     </button> 
-                    {addQuestionModalOpen && quizForQuestions && (
-                    <AddQuestionsModal
-                        quiz={quizForQuestions}
-                        onClose={() => setAddQuestionModalOpen(false)}
-                        onAddQuestion={handleAddQuestion}
-                    />
-                    )}
                      <button
                         onClick={() => {
                             navigate(`/quiz`);
@@ -208,16 +200,24 @@ export default function Quizzes() {
                     >
                         Edit 
                     </button>
-                       {editQuestionModalOpen && quizForQuestions && (
-                        <EditQuestionModal
-                            quiz={quizForQuestions}
-                            onClose={() => setEditQuestionModalOpen(false)}
-                            onEditQuestion={handleEditQuestion}
-                            />
-                        )}
                 </td>
               </tr>
             ))}
+            {addQuestionModalOpen && quizForQuestions && (
+                <AddQuestionsModal
+                    quiz={quizForQuestions}
+                    onClose={() => setAddQuestionModalOpen(false)}
+                    onAddQuestion={handleAddQuestion}
+                />
+                )}
+
+                {editQuestionModalOpen && quizForQuestions && (
+                <EditQuestionModal
+                    quiz={quizForQuestions}
+                    onClose={() => setEditQuestionModalOpen(false)}
+                    onEditQuestion={handleEditQuestion}
+                />
+                )}
           </tbody>
         </table>
       </div>

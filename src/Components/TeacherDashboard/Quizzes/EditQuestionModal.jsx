@@ -1,56 +1,49 @@
 import React, { useState, useEffect } from "react";
 
 export default function EditQuestionModal({ quiz, onClose, onEditQuestion }) {
-  const [selectedIndex, setSelectedIndex] = useState(null);
-  const [questionData, setQuestionData] = useState({
-    questionText: "",
-    options: ["", "", "", ""],
-    correctAnswerIndex: 0,
-  });
+  const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
     if (quiz?.questions?.length > 0) {
-      setSelectedIndex(0);
-      setQuestionData(quiz.questions[0]);
+      setQuestions(quiz.questions);
     }
   }, [quiz]);
 
-  const handleSelectChange = (e) => {
-    const index = parseInt(e.target.value);
-    setSelectedIndex(index);
-    setQuestionData(quiz.questions[index]);
+  const handleInputChange = (qIndex, field, value) => {
+    const updated = [...questions];
+    updated[qIndex][field] = value;
+    setQuestions(updated);
   };
 
-  const handleInputChange = (field, value) => {
-    setQuestionData((prev) => ({ ...prev, [field]: value }));
+  const handleOptionChange = (qIndex, optIndex, value) => {
+    const updated = [...questions];
+    updated[qIndex].options[optIndex] = value;
+    setQuestions(updated);
   };
 
-  const handleOptionChange = (index, value) => {
-    const updatedOptions = [...questionData.options];
-    updatedOptions[index] = value;
-    setQuestionData((prev) => ({ ...prev, options: updatedOptions }));
+  const handleCorrectAnswerChange = (qIndex, index) => {
+    const updated = [...questions];
+    updated[qIndex].correctAnswerIndex = index;
+    setQuestions(updated);
   };
 
-  const handleCorrectAnswerChange = (index) => {
-    setQuestionData((prev) => ({ ...prev, correctAnswerIndex: index }));
+  const handleDeleteQuestion = (qIndex) => {
+    const updated = [...questions];
+    updated.splice(qIndex, 1);
+    setQuestions(updated);
   };
 
-  const handleSave = () => {
-    if (selectedIndex === null) return;
-    const updatedQuestions = [...quiz.questions];
-    updatedQuestions[selectedIndex] = questionData;
-    const updatedQuiz = { ...quiz, questions: updatedQuestions };
+  const handleSaveAll = () => {
+    const updatedQuiz = { ...quiz, questions };
     onEditQuestion(updatedQuiz);
     onClose();
   };
 
-  if (selectedIndex === null) return null;
-
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex justify-center items-center">
-      <div className="bg-white w-full max-w-4xl rounded-xl p-6 overflow-y-auto max-h-[90vh]">
+      <div className="bg-white w-full max-w-5xl rounded-xl p-6 max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold">Edit Question</h2>
+          <h2 className="text-xl font-bold">Edit Questions</h2>
           <button
             onClick={onClose}
             className="text-gray-500 font-bold hover:text-gray-700"
@@ -59,56 +52,70 @@ export default function EditQuestionModal({ quiz, onClose, onEditQuestion }) {
           </button>
         </div>
 
-        {/* Question selector */}
-        <div className="mb-4">
-          <label className="font-semibold block mb-1">Select Question</label>
-          <select
-            value={selectedIndex}
-            onChange={handleSelectChange}
-            className="w-full border rounded p-2"
-          >
-            {quiz.questions.map((_, index) => (
-              <option key={index} value={index}>
-                Question {index + 1}
-              </option>
-            ))}
-          </select>
-        </div>
+        {/* Fallback for no questions */}
+        {questions.length === 0 ? (
+          <p className="text-center text-gray-500 my-10">
+            No questions available.
+          </p>
+        ) : (
+          questions.map((question, qIndex) => (
+            <div key={qIndex} className="mb-6 p-4 border rounded-lg shadow-sm">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-semibold">Question {qIndex + 1}</h3>
+                <button
+                  onClick={() => handleDeleteQuestion(qIndex)}
+                  className="text-red-500 hover:text-red-700 text-sm"
+                >
+                  🗑 Delete
+                </button>
+              </div>
 
-        {/* Question text */}
-        <div className="mb-4">
-          <label className="font-semibold block mb-1">Question Text</label>
-          <input
-            type="text"
-            value={questionData.questionText}
-            onChange={(e) => handleInputChange("questionText", e.target.value)}
-            className="w-full border rounded p-2"
-          />
-        </div>
-
-        {/* Options */}
-        <div className="mb-4">
-          <label className="font-semibold block mb-2">Options</label>
-          {questionData.options.map((opt, index) => (
-            <div key={index} className="flex items-center gap-3 mb-2">
-              <input
-                type="text"
-                value={opt}
-                onChange={(e) => handleOptionChange(index, e.target.value)}
-                className="w-full border rounded p-2"
-              />
-              <label className="flex items-center gap-1 text-sm">
+              {/* Question Text */}
+              <div className="mb-3">
+                <label className="block font-medium mb-1">Question Text</label>
                 <input
-                  type="radio"
-                  name="correctAnswer"
-                  checked={questionData.correctAnswerIndex === index}
-                  onChange={() => handleCorrectAnswerChange(index)}
+                  type="text"
+                  value={question.questionText}
+                  onChange={(e) =>
+                    handleInputChange(qIndex, "questionText", e.target.value)
+                  }
+                  className="w-full border rounded p-2"
                 />
-                Correct
-              </label>
+              </div>
+
+              {/* Options */}
+              <div className="mb-3">
+                <label className="block font-medium mb-2">Options</label>
+                {question.options.map((opt, optIndex) => (
+                  <div
+                    key={optIndex}
+                    className="flex items-center gap-3 mb-2"
+                  >
+                    <input
+                      type="text"
+                      value={opt}
+                      onChange={(e) =>
+                        handleOptionChange(qIndex, optIndex, e.target.value)
+                      }
+                      className="w-full border rounded p-2"
+                    />
+                    <label className="flex items-center gap-1 text-sm">
+                      <input
+                        type="radio"
+                        name={`correct-${qIndex}`}
+                        checked={question.correctAnswerIndex === optIndex}
+                        onChange={() =>
+                          handleCorrectAnswerChange(qIndex, optIndex)
+                        }
+                      />
+                      Correct
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
+          ))
+        )}
 
         {/* Actions */}
         <div className="flex justify-end gap-3 mt-6">
@@ -119,10 +126,11 @@ export default function EditQuestionModal({ quiz, onClose, onEditQuestion }) {
             Cancel
           </button>
           <button
-            onClick={handleSave}
+            onClick={handleSaveAll}
             className="px-4 py-2 bg-primaryGreen text-white rounded hover:bg-green-600"
+            disabled={questions.length === 0}
           >
-            Save
+            Save All
           </button>
         </div>
       </div>
